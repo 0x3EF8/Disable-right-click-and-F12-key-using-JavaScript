@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Disable Mouse Right Click</title>
+
+    <script src="disable.js"></script>
+
+</head>
+
+<body oncontextmenu="return false;">
+
+<h1>Disable right click and F12 key using JavaScript</h1>
+
+<p>In this short article, we’ll explain to you how to disable right click using JavaScript. Sometimes you want to disable right-click to protect your own content or information from the user.
+<br>
+You need to just add the following script code in the <body> section.
+<br>
+<br>
+
+    // disable right click
+    document.addEventListener('contextmenu', event => event.preventDefault());
+ 
+    document.onkeydown = function (e) {
+ 
+        // disable F12 key
+        if(e.keyCode == 123) {
+            return false;
+        }
+ 
+        // disable I key
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 73){
+            return false;
+        }
+ 
+        // disable J key
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+            return false;
+        }
+ 
+        // disable U key
+        if(e.ctrlKey && e.keyCode == 85) {
+            return false;
+        }
+    }
+ 
+<br>
+<br>
+With the help of the above code, we can disable the right click using preventDefault() method in contextmenu event. Also disable the F12 , Ctrl + Shift + I, Ctrl + Shift + J and Ctrl + U keys.
+<br>
+Instead of the contextmenu event, You can also add the oncontextmenu handler into the HTML body tag to disable the right click. Check out the following code.
+<br>
+<br>
+<body oncontextmenu="return false;">
+<br>
+<br>
+That’s it for today.
+Thank you for reading. Happy Coding..!!
+</p>
+    
+</body>
+
+</html>
