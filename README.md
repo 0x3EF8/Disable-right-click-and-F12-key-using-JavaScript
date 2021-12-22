@@ -5,7 +5,7 @@ Disable mouse right click in a web browser using Vanilla JS
 
 Include the script file: disableMouseRightClick.js
 ```
-<script src="disableMouseRightClick.js"></script>
+<script src="disable.js"></script>
 ```
 
 ## Settings
